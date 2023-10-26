@@ -21,12 +21,12 @@ resource "azurerm_app_service_plan" "concastplan" {
     location = var.location
     resource_group_name = var.resource_group_name
     kind = "Linux"
-    reserved = var.reserved_name 
+    reserved = true
     zone_redundant = var.zone_redundant
     sku {
     tier = var.tier_value
     size = var.size_capacity
-    capacity = var.capacity_value
+    capacity = "0"
     }
 
  tags = {
