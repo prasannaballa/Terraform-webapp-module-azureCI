@@ -10,7 +10,7 @@ terraform {
 module "dev" {
   source      = "../module"
   prefix = "dev"
-  resource_group_name = "sivaaks"
+  resource_group_name = "webappcimodule"
   location            = "CentralUS"
   acr_name            = "myacrqat1234"            
 }
