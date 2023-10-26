@@ -22,7 +22,6 @@ resource "azurerm_app_service_plan" "concastplan" {
     resource_group_name = "webappcimodule123"
     kind = "Linux"
     reserved = true
-    zone_redundant = var.zone_redundant
     sku {
     tier = var.tier_value
     size = var.size_capacity
