@@ -10,7 +10,6 @@ terraform {
 module "dev" {
   source      = "../module"
   prefix = "dev"
-  resource_group_name = "webappcimodule"
   location            = "CentralUS"
   app_service_plan = "webappmoduleplan"
   zone_redundant = "false"
