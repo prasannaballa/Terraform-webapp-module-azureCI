@@ -44,10 +44,6 @@ variable "app_service_plan" {
   type        = string
   description = "serviceplan name"
 }
-variable "reserved_name" {
-  type        = string
-  description = "true or false"
-}
 
 variable "zone_redundant" {
   type        = string
@@ -63,10 +59,7 @@ variable "size_capacity" {
   type        = string
   description = "capacity of size"
 }
-variable "capacity_value" {
-  type        = string
-  description = "givevalue"
-}
+
 variable "docker_registry_url" {
   type        = string
   description = "registerurl"
