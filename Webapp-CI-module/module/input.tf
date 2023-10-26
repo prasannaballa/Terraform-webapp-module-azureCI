@@ -41,11 +41,6 @@ variable "app_service_plan" {
   description = "serviceplan name"
 }
 
-variable "zone_redundant" {
-  type        = string
-  description = "true or false"
-}
-
 variable "tier_value" {
   type        = string
   description = "value"
