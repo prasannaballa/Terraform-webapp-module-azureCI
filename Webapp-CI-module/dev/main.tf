@@ -11,7 +11,7 @@ module "dev" {
   source      = "../module"
   prefix = "dev"
   resource_group_name = "sivaaks"
-  location            = "Central India"
+  location            = "CentralUS"
   app_service_plan = "webappmoduleplan"
   zone_redundant = "false"
   tier_value = "Basic"
