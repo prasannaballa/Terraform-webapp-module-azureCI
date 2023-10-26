@@ -26,7 +26,6 @@ resource "azurerm_app_service_plan" "concastplan" {
     sku {
     tier = var.tier_value
     size = var.size_capacity
-    capacity = "0"
     }
 
  tags = {
