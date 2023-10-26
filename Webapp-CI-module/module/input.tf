@@ -30,10 +30,6 @@ variable "location" {
   default = "East US"
   description = "Rg location"
 }
-variable "resource_group_name" {
-  type        = string
-  description = "RG name in Azure"
-}
 
 variable "prefix" {
   type = string
