@@ -19,7 +19,7 @@ provider "azurerm" {
 resource "azurerm_app_service_plan" "concastplan" {
     name = var.app_service_plan
     location = var.location
-    resource_group_name = var.resource_group_name
+    resource_group_name = "webappcimodule123"
     kind = "Linux"
     reserved = true
     zone_redundant = var.zone_redundant
