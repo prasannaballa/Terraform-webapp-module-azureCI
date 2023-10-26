@@ -12,7 +12,6 @@ module "dev" {
   prefix = "dev"
   location            = "CentralUS"
   app_service_plan = "webappmoduleplan"
-  zone_redundant = "false"
   tier_value = "Basic"
   size_capacity =  "B1"
   docker_registry_url = "myacrmoduledev123.azurecr.io"
