@@ -15,44 +15,23 @@ provider "azurerm" {
     client_secret = var.client_secret
     tenant_id =var.tenant_id
 
+
 }
-resource "azurerm_app_service_plan" "concastplan" {
-    name = var.app_service_plan
+resource "azurerm_resource_group" "testrglabel" {
+    name = var.resource_group_name
     location = var.location
-    resource_group_name = "webappcimodulenew123"
-    kind = "Linux"
-    reserved = true
-    sku {
-    tier = var.tier_value
-    size = var.size_capacity
+    tags = {
+      "name" = "practice-rsg"
+
     }
+}
 
- tags = {
-  "name" = "practice-appplan"
-}
-}
-locals {
- env_variables = {
-   DOCKER_REGISTRY_SERVER_URL            = var.docker_registry_url
-   DOCKER_REGISTRY_SERVER_USERNAME       = var.docker_server_username
-   DOCKER_REGISTRY_SERVER_PASSWORD       = var.docker_server_password
- } 
-}
-resource "azurerm_app_service" "concastapp" {
-    name = var.app_service_name
-    location = var.location
-    resource_group_name = "webappcimodulenew123"
-    app_service_plan_id = azurerm_app_service_plan.concastplan.id
-    site_config {
-    linux_fx_version = "DOCKER|myacrmoduleqatci123.azurecr.io/myacrmoduleqatci123"
-    # registry_source="ACR"
+resource "azurerm_container_registry" "acr" {
+  name                = var.acr_name
+  resource_group_name = azurerm_resource_group.testrglabel.name
+  location            = var.location
+  sku                 = "Basic"
+  admin_enabled       = false
 
-  }
   
-    app_settings = local.env_variables
-    
-}
-
-output "id" {
-  value = azurerm_app_service_plan.concastplan.id
 }

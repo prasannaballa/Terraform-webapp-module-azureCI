@@ -30,15 +30,43 @@ variable "location" {
   default = "East US"
   description = "Rg location"
 }
-variable "resource_group_name" {
-  type        = string
-  description = "RG name in Azure"
-}
-variable "acr_name" {
-  type        = string
-  description = "ACR name"
-}
+
 variable "prefix" {
   type = string
   description = "The prefix used for all resources in this example"
 }
+
+variable "app_service_plan" {
+  type        = string
+  description = "serviceplan name"
+}
+
+variable "tier_value" {
+  type        = string
+  description = "value"
+}
+
+variable "size_capacity" {
+  type        = string
+  description = "capacity of size"
+}
+
+variable "docker_registry_url" {
+  type        = string
+  description = "registerurl"
+}
+variable "docker_server_username" {
+  type        = string
+  description = "server name"
+}
+variable "docker_server_password" {
+  type        = string
+  description = "server password"
+}
+
+variable "app_service_name"{
+  type        = string
+  description = "give webname"
+}
+
+
