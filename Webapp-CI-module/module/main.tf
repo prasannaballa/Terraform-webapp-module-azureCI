@@ -44,7 +44,7 @@ resource "azurerm_app_service" "concastapp" {
     resource_group_name = "webappcimodulenew123"
     app_service_plan_id = azurerm_app_service_plan.concastplan.id
     site_config {
-    linux_fx_version = var.linux_version_value
+    linux_fx_version = "DOCKER|myacrmoduleqatci123.azurecr.io/myacrmoduleqatci123"
     # registry_source="ACR"
 
   }
