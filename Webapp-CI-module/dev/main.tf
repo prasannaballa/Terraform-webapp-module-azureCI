@@ -13,7 +13,7 @@ module "dev" {
   location            = "South Central US "
   app_service_plan = "webappmoduleplan"
   tier_value = "Basic"
-  size_capacity =  "small"
+  size_capacity =  "B1"
   docker_registry_url = "myacrmoduleqatci123.azurecr.io"
   docker_server_username = "myacrmoduleqatci123"
   docker_server_password = "J9OKTkV3XhR3nyKlAPvkEvUfB8xMgD6aM7YeOEjWs/+ACRBE4hLI"
