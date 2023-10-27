@@ -69,7 +69,4 @@ variable "app_service_name"{
   description = "give webname"
 }
 
-variable "linux_version_value"{
-  type        = string
-  description = "give acr name and server"
-}
+
