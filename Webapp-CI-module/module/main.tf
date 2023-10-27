@@ -19,7 +19,7 @@ provider "azurerm" {
 resource "azurerm_app_service_plan" "concastplan" {
     name = var.app_service_plan
     location = var.location
-    resource_group_name = "webappcimodule123"
+    resource_group_name = "webappcimodulenew123"
     kind = "Linux"
     reserved = true
     sku {
@@ -41,7 +41,7 @@ locals {
 resource "azurerm_app_service" "concastapp" {
     name = var.app_service_name
     location = var.location
-    resource_group_name = "webappcimodule123"
+    resource_group_name = "webappcimodulenew123"
     app_service_plan_id = azurerm_app_service_plan.concastplan.id
     site_config {
     linux_fx_version = var.linux_version_value
