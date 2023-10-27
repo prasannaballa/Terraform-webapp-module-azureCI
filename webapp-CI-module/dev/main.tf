@@ -12,5 +12,5 @@ module "dev" {
   prefix = "dev"
   resource_group_name = "webappcimodule123"
   location            = "South Central US"
-  acr_name            = "myacrmoduledev123"            
+  acr_name            = "myacrmoduleqat123"            
 }
