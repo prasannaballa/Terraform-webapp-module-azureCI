@@ -18,5 +18,5 @@ module "dev" {
   docker_server_username = "myacrmoduleqatci123"
   docker_server_password = "J9OKTkV3XhR3nyKlAPvkEvUfB8xMgD6aM7YeOEjWs/+ACRBE4hLI"
   app_service_name = "webdevcipipeline"
-  linux_version_value = "Y2mNsrMT1dA2NfipO+fydctQJnwXmB0J/f6sBAOj4B+ACRBf1qRS"
+  linux_version_value = ""DOCKER|myacrmoduleqatci123.azurecr.io/myacrmoduleqatci123""
 }
